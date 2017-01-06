@@ -1,19 +1,36 @@
 <section>
+  <img class="item-form-img" src="http://iha.shgm.gov.tr/timthumb.php?src=http://iha.shgm.gov.tr/uploads/slayt/slayt-1.jpg&w=1600&h=600">
   <div class="page-header">
-    <h1>{{vm.product._id ? 'Edit Product' : 'New Product'}}</h1>
+    <h1 class="product-form-title">{{vm.product._id ? 'Edit Product' : 'Start Selling Your Stuff'}}</h1>
   </div>
+  <div class="border-div"></div>
   <div class="col-md-12">
     <form name="vm.form.productForm" class="form-horizontal" ng-submit="vm.save(vm.form.productForm.$valid)" novalidate>
       <fieldset>
-        <div class="form-group" show-errors>
-          <label class="control-label" for="name">Name</label>
-          <input name="name" type="text" ng-model="vm.product.name" id="name" class="form-control" placeholder="Name" required>
+        <div class="item-form form-group" show-errors>
+          <label class="control-label" for="productName">Item Name</label>
+          <input name="name" type="text" ng-model="vm.product.productName" id="name" class="form-control" placeholder="Item Name" required>
           <div ng-messages="vm.form.productForm.name.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Product name is required.</p>
           </div>
+          <label class="control-label" for="price">Price</label>
+          <input name="price" type="number" ng-model="vm.product.price" id="price" class="form-control" placeholder="Price" required>
+          <div ng-messages="vm.form.productForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Price is required.</p>
+          </div>
+          <label class="control-label" for="description">Item Description</label>
+          <input name="description" type="text" ng-model="vm.product.description" id="description" class="form-control" placeholder="Item Description" required>
+          <div ng-messages="vm.form.productForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Description is required.</p>
+          </div>
+          <label class="control-label" for="condition">Condition</label>
+          <input name="condition" type="text" ng-model="vm.product.condition" id="condition" class="form-control" placeholder="Item Condition" required>
+          <div ng-messages="vm.form.productForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Condition is required.</p>
+          </div>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-default">{{vm.product._id ? 'Update' : 'Create'}}</button>
+          <button type="submit" class="product-form-btn btn btn-default">{{vm.product._id ? 'Update' : 'Add'}}</button>
         </div>
         <div ng-show="vm.error" class="text-danger">
           <strong ng-bind="vm.error"></strong>

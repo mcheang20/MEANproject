@@ -10,10 +10,28 @@ var mongoose = require('mongoose'),
  * Product Schema
  */
 var ProductSchema = new Schema({
-  name: {
+  productName: {
     type: String,
     default: '',
-    required: 'Please fill Product name',
+    required: 'Please fill product name',
+    trim: true
+  },
+  price: {
+    type: Number,
+    default: '',
+    required: 'Please add product price',
+    trim: true
+  },
+  description: {
+    type: String,
+    default: '',
+    required: 'Please fill product description',
+    trim: true
+  },
+  condition: {
+    type: String,
+    default: '',
+    required: 'Please fill product condition',
     trim: true
   },
   created: {

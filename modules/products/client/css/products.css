@@ -1,0 +1,62 @@
+.item-form-img {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: -210px;
+}
+
+.product-form-title {
+  position: absolute;
+  color: white;
+  font-weight: 200;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-left: 65px;
+}
+
+.border-div {
+  border-bottom: 5px solid rgba(255,255,255,.6);
+  border-radius: 20px;
+  position: relative;
+  margin-top: 75px;
+  width: 50%;
+}
+
+.item-form {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.item-form label {
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.product-form-btn {
+  font-size: 18px;
+}
+
+.product-form-btn button {
+  background-color: yellow;
+}
+
+.price-icon {
+  float: left;
+}
+
+.btn-sell {
+  padding: 10px;
+  margin-right: 50px;
+  color: white;
+  border: 2px solid rgb(12, 175, 225);
+  border-radius: 20px;
+  background-color: rgb(12, 175, 225);
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.btn-sell:hover {
+  background-color: white;
+  color: black;
+}

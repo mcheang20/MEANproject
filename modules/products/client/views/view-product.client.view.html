@@ -1,6 +1,15 @@
 <section>
   <div class="page-header">
-    <h1 ng-bind="vm.product.name"></h1>
+    <h1 ng-bind="vm.product.productName"></h1>
+  </div>
+  <div class="item-view-details">
+    <img src="http://matchem.com/wp-content/uploads/2015/03/plain-blue-shirt-front-and-back-72hi3bcb.jpg">
+    <div>
+      <i class="price-icon glyphicon glyphicon-usd"></i>
+      <p ng-bind="vm.product.price">$</p>
+    </div>
+    <p ng-bind="vm.product.description"></p>
+    <p ng-bind="vm.product.condition"></p>
   </div>
   <div class="pull-right"
        ng-show="vm.product.isCurrentUserOwner">

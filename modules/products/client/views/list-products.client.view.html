@@ -1,12 +1,25 @@
 <section>
   <div class="page-header">
+    <div class="search-bar-header col-lg-6">
+     <div class="input-group">
+       <input type="text" class="form-control" placeholder="Search for..." ng-model="searchText">
+       <span class="input-group-btn">
+         <button class="btn btn-default" type="button">Go!</button>
+       </span>
+     </div>
+   </div>
+      <button class="btn-sell pull-right" type="button" ui-sref="products.create">Sell An Item!</button>
     <h1>Products</h1>
   </div>
+
   <div class="list-group">
-    <a ng-repeat="product in vm.products"
-       ui-sref="products.view({ productId: product._id })"
-       class="list-group-item">
+    <a ng-repeat="product in vm.products | filter:searchText" ui-sref="products.view({ productId: product._id })" class="list-group-item col-md-4">
       <small class="list-group-item-text">
+        <img src="http://matchem.com/wp-content/uploads/2015/03/plain-blue-shirt-front-and-back-72hi3bcb.jpg" style="width:100px;height:100px;">
+        {{product.productName}}
+        {{product.price}}
+        {{product.description}}
+        {{product.condition}}
         Posted on
         <span ng-bind="product.created | date:'mediumDate'"></span>
         by

@@ -43,3 +43,9 @@ a:hover .header-profile-image {
 .navbar-top a {
   border: 1px solid;
 }
+
+.search-bar-header {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 8px;
+}

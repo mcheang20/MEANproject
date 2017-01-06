@@ -7,7 +7,21 @@
       <span class="icon-bar"></span>
     </button>
     <a ui-sref="home" class="navbar-brand">HOME</a>
-    <a ui-sref="products.list" class="navbar-brand">Products</a>
+    <ul class="nav navbar-nav">
+      <li class="dropdown" dropdown>
+        <a class="dropdown-toggle user-header-dropdown-toggle" dropdown-toggle role="button">
+          <span>Items</span><b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li ui-sref-active="active">
+            <a ui-sref="products.list">For Sale</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="products.create">Sell An Item</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
   <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
     <ul class="nav navbar-nav" ng-if="menu.shouldRender(authentication.user);">
